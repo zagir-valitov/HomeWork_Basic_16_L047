@@ -3,12 +3,20 @@
 
 Console.WriteLine(" --- Home Work 16 ---\n");
 
-
 var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=5891;";
 //connectionString = "Server=(localdb)\\mssqllocaldb;Database=adonetdb;Trusted_Connection=True;";
 
-var filmsStore = new FilmData(connectionString);
+//----------------------------------------------------------------------
+var actorList = new ActorData(connectionString);
+var actor = actorList.GetUniqueNames();
+for (int i = 0; i < actor.Count; i++)
+{
+    Console.WriteLine($"{i + 1})\t{actor[i]}");
+}
+Console.ReadLine();
 
+//----------------------------------------------------------------------
+var filmsStore = new FilmData(connectionString);
 var filmDuration = filmsStore.GetFilmsByDuration(100);
 for (int i = 0; i < filmDuration.Count; i++)
 {
@@ -16,17 +24,10 @@ for (int i = 0; i < filmDuration.Count; i++)
 }
 Console.ReadLine();
 
+//----------------------------------------------------------------------
 var filmRating = filmsStore.GetFilmsByRating("G");
 for (int i = 0; i < filmRating.Count; i++)
 {
     Console.WriteLine($"{i + 1})\t{filmRating[i]}");
-}
-Console.ReadLine();
-
-var actorList = new ActorData(connectionString);
-var actor = actorList.GetUniqueNames();
-for (int i = 0; i < actor.Count; i++)
-{
-    Console.WriteLine($"{i + 1})\t{actor[i]}");    
 }
 Console.ReadLine();
