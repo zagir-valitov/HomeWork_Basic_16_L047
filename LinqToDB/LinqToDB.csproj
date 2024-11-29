@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\ActorModel.cs" />
-    <Compile Remove="Models\FilmModel.cs" />
-    <Compile Remove="Models\FilmTitleAndDescription.cs" />
-    <Compile Remove="Models\FilmTitleAndReleaseYear.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\CopyMe.PostgreSQL.tt.txt" />
     <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\DataAnnotations.ttinclude" />
     <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\DataModel.ttinclude" />
