@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\ActorModel.cs" />
+    <Compile Remove="Models\FilmModel.cs" />
+    <Compile Remove="Models\FilmTitleAndDescription.cs" />
+    <Compile Remove="Models\FilmTitleAndReleaseYear.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\CopyMe.PostgreSQL.tt.txt" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\DataAnnotations.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\DataModel.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\EditableObject.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\Equatable.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\Humanizer.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\LinqToDB.PostgreSQL.Tools.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\LinqToDB.PostgreSQL.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\LinqToDB.Tools.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\LinqToDB.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\MultipleFiles.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\NotifyDataErrorInfo.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\NotifyPropertyChanged.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\ObsoleteAttributes.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\PluralizationService.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\T4Model.ttinclude" />
+    <None Remove="C:\Users\Загир\.nuget\packages\linq2db.postgresql\5.4.1\contentFiles\any\any\LinqToDB.Templates\Validation.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="linq2db.PostgreSQL" Version="5.4.1" />
+    <PackageReference Include="Npgsql" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ScreenShots\" />
+  </ItemGroup>
+
+</Project>
