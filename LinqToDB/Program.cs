@@ -47,21 +47,21 @@ var orderUpdate1 = new OrderModel
 
 var orCount = order.UpdateOrder(orderUpdate1);
 
-var customerOver30ByOrderID = from c in db.Customers
-                              join o in db.Orders on c.CustomerID equals o.CustomerID
-                              join p in db.Products on o.ProductID equals p.ProductID
-                              where o.ProductID == 1
-                              where c.Age > 30
-                              select new
-                              {
-                                  OrderID = o.OrderID,
-                                  CustomerID = c.CustomerID,
-                                  FirstName = c.FirstName,
-                                  LastName = c.LastName,
-                                  ProductID = p.ProductID,
-                                  Quantity = o.Quantity,
-                                  Price = p.Price
-                              };
+var customerOver30ByOrderID = 
+    from c in db.Customers
+    join o in db.Orders on c.CustomerID equals o.CustomerID
+    join p in db.Products on o.ProductID equals p.ProductID
+    where o.ProductID == 1 && c.Age > 30
+    select new
+    {
+        OrderID = o.OrderID,
+        CustomerID = c.CustomerID,
+        FirstName = c.FirstName,
+        LastName = c.LastName,
+        ProductID = p.ProductID,
+        Quantity = o.Quantity,
+        Price = p.Price
+    };
 
 foreach (var c in customerOver30ByOrderID)
 {
